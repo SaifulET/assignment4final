@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Ajax</title>
+</head>
+<body>
+    <button onclick="deleted()">DeleteItem</button>
+
+    <script>
+        async function deleted(){
+            let id="6667258ea9e9e40ec38d5352";
+            let url="https://crud.teamrabbil.com/api/v1/DeleteProduct/"+id;
+            let data= await fetch(url);
+            let jsonData= await data.json();
+            console.log(jsonData);
+        }
+    </script>
+</body>
+</html>

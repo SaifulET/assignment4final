@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+        <h1>Before change</h1>
+        <button onclick="ajaxfunction()">change the content</button>
+    </div>
+    <div id=""></div>
+    <script>
+        function ajaxfunction(){
+            const xhr = new XMLHttpRequest();
+            xhr.onload=function(){
+           
+                let demo =document.getElementById("demo");
+                demo.innerHTML=this.responseText;
+               
+                
+            }
+            xhr.open("GET","cd_catalog.xml");
+            xhr.send();
+
+        }
+
+    </script>
+</body>
+</html>

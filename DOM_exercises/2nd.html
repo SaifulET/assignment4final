@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"id="in"value="">
+    <button id="btn">submit</button>
+    <p id="para"></p>
+    <script>
+        let Input = document.getElementById("in");
+        let para = document.getElementById("para");
+        let button= document.getElementById("btn");
+        function fun1()
+            {
+                if(Input.value!=""){
+                    if(para.innerText!=""){
+                    para.innerText=para.innerText +"\n"+Input.value;
+                }
+                else{
+                    para.innerText=para.innerText+Input.value;
+                }
+                    Input.value="";
+                }
+                else{
+                    alert("enter input");
+                }
+                
+            } 
+
+        button.addEventListener("click",fun1);
+        Input.addEventListener("keypress",function(e){
+            if(e.key === "enter"){
+                    fun1();
+                }
+            })
+    </script>
+</body>
+</html>

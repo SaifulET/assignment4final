@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Ajax</title>
+</head>
+<body>
+    <button onclick="create()">create</button>
+
+    <script>
+        async function create(){
+            let url="https://crud.teamrabbil.com/api/v1/CreateProduct";
+
+            const myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+
+            const raw = JSON.stringify({
+            "_id": "6667258ea9e9e40ec38d5352",
+            "ProductName": "econo",
+            "ProductCode": "4000003",
+            "Img": "C:\\fakepath\\Screenshot (9).png",
+            "UnitPrice": "445",
+            "Qty": "45",
+            "TotalPrice": "130",
+            "CreatedDate": "2024-06-08T13:17:33.649Z"
+        });
+
+            const requestOptions = {
+            method: "POST",
+            headers: myHeaders,
+            body: raw,
+            };
+           let data= await fetch(url, requestOptions);
+           let jsonData=data.json();
+           console.log(jsonData);
+        }
+    </script>
+</body>
+</html>

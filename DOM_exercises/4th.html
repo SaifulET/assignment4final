@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>appendChild event</title>
+</head>
+<body>
+    <ul id="perent">
+        <li><a href="">Home</a></li>
+        <li><a href="">Menu</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">contact</a></li>
+    </ul>
+    <button onclick="newli()">new li</button>
+    <script>
+        let perent = document.getElementById("perent");
+        i=0;
+        function newli(){
+            if(i<=0){
+            let creatli = document.createElement("li");
+            let creatA  = document.createElement("a");
+            let textnode = document.createTextNode("Login");
+            creatA.appendChild(textnode);
+            creatA.href="";
+            creatli.appendChild(creatA)
+            perent.appendChild(creatli);
+            i++;
+            }
+        }
+    </script>
+</body>
+</html>

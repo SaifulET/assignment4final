@@ -1,0 +1,342 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none !important;
+    transition: all 0.2s linear !important;
+}
+header{
+    position: relative;
+}
+ul,li{
+    list-style: none;
+    height:100%;
+}
+header .nav{
+    width: 100%;
+    height: 100%;
+    margin:auto;
+    padding-top:25px;
+}
+header .nav .items{
+    height: 100%;
+    width: 100%;
+    margin:auto;
+}
+header .nav .items ul{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:25px;
+    margin:0;  
+}
+header .nav .login{
+    height: 100%;
+    width: 100%;
+    margin:auto;
+}
+header .nav .login ul{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    margin:0; 
+    gap:25px; 
+}
+header .nav .login ul .btn {
+    background: rgb(22, 84, 199);
+} 
+header  a{
+    font-weight: 500; 
+    color:#000;
+}
+
+header .login a{
+    color:#302F2F;
+    transition: all 0.2s linear;
+}
+header .login a:hover{
+    color:#59a7e7;
+}
+.vrl{
+    font-size: 30px;
+    font-weight: 100;
+    color:#a69999 !important;
+}
+header .items ul li{
+    position:relative;
+}
+header .items .active{
+    color:#2196F3 !important;
+}
+header .items .active::after{
+    position: absolute;
+    content: "";
+    bottom:0;
+    left:0;
+    width:50%;
+    height: 2px;
+    background: #2196F3;
+}
+
+/* hero-section  */
+.hero-section{
+    padding-top:56px;
+    padding-bottom: 56px;
+}
+.pera1{
+    margin-top:64px;
+}
+.pera1 h1{
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 64px;
+}
+.pera1 h3{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    margin-bottom:24px;
+}
+.pera1 button{
+    width:211px;
+    height:50px;
+    display:block;
+    text-transform: uppercase;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border:2px solid #00BCD4;
+    border-radius: 10px;;
+    background: #fff;
+    color: #00BCD4;
+    font-weight: 500;
+    font-size: 16px;
+}
+.pera1 button img{
+    margin-left:10px;
+}
+.shape{
+    position:absolute;
+    top:0;
+    right:0;
+    height: 100%;
+    z-index: -1;
+}
+
+
+.discription{
+    padding-bottom:60px;
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+    
+}
+.discription div{
+    padding-top:0;
+    padding-bottom: 0;;
+    padding-right: 25px;
+    padding-left:25px;
+    margin:0;
+}
+.discription h6{
+    font-size: 2.2em;
+    font-weight: 500;
+    line-height: 1.02;
+    padding-bottom:14px;
+}
+.discription p{
+    font-size: 1.02em;
+    font-weight: 400;
+    line-height: 10px;
+}
+.discription .first,.discription .second{
+    border-right: 2px solid #c6b8b8 ;
+}
+
+.banner{
+    padding:1.25em auto;
+    
+}
+.banner-area img{
+    padding-right:10px;
+}
+.banner .ban-des {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .banner .ban-des  h2{
+    font-size: 28px;
+    font-weight: 500;
+ }
+ .banner .ban-des p{
+    font-size: 18px;
+    font-weight: 400; 
+ }
+
+ .banner .ban-des .ratting{
+    display: flex;
+    justify-content: space-between;
+ }
+ .banner .ban-des .ratting .border{
+    height: 8px;
+    background:#00BCD4;
+    margin-bottom:3px;
+    margin-top:6px;
+    border-radius: 10px;
+ }
+
+/* ready section  */
+ .ready{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 168px;
+    margin:100px auto;
+    background:  #00BCD4;;
+    border-radius: 10px;
+    
+ }
+ @media screen and (max-width: 800px) {
+    .container{
+        margin:0 !important;
+        padding: 5px!important;
+     }
+  }
+ 
+ .ready-area{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+ }
+
+ .ready-area  .des h2{
+    font-size:2.5em;
+    font-weight: 700;
+    color: #ffff;
+ }
+ .ready-area .des p{
+    font-size:1.02em;
+    font-weight: 500;
+    color: #ffff;
+ }
+ .ready button{
+    width:13.18em;
+    height:50px;
+    text-transform: uppercase;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border:2px solid #00BCD4;
+    border-radius: 10px;;
+    background: #fff;
+    color: #00BCD4;
+    font-weight: 500;
+    font-size: 16px;
+ }
+ .ready button img{
+    margin-left:0.625em;
+ }
+
+
+
+ footer {
+    position :relative;
+    margin:auto 17px;
+ }
+ footer .fs1{
+    position:absolute;
+    content:"";
+    top:25px;
+    left:150px;
+    width:50%;
+    height: 100%;
+    z-index:-1;
+ }
+ footer .fs2{
+    position:absolute;
+    content:"";
+    top:5px;
+    left:150px;
+    width:50%;
+    height: 50%;
+    z-index: -1;
+ }
+ footer .first .logo{
+    margin-bottom:30px;
+ }
+ footer .first .para{
+    margin-bottom:30px;
+}
+ footer .middle h2{
+    color:#0D47A1;
+    font-size:18px;
+    font-weight: 700;
+    line-height: 22px;
+}
+
+footer .last .icon{
+    padding-top:30px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;   
+ }
+ footer .last a{
+    font-size: 18px;
+    background:#EBEBEB;
+    width:45px;
+    height:45px;
+    border-radius: 50%;
+    margin: 8px;
+    position: relative;   
+ }
+ footer .last a i{
+    position: absolute;
+    top:45%;
+    left:50%;
+    transform: translate(-50%,-50%);
+ }
+ footer .fs3{
+    position:absolute;
+    content:"";
+    top:5px;
+    right:155px;
+    z-index: -1;
+ }
+ footer .fs4{
+    position:absolute;
+    content:"";
+    top:0;
+    right:155px;
+    z-index: -1;
+ }
+ .input{  
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    padding:5px;
+    border :1px solid #2196F3;
+    margin:auto 10% ;
+    border-radius: 4px;
+ }
+ .input ul{
+    margin:0;
+ }
+ .input i.bi-globe2{
+    padding-right: 0.3rem;
+    color:#0D47A1 !important;
+ }
+ 
+ .input ul li i.bi-chevron-down{
+    padding-left:2rem;
+ }
+ .input ul li div{
+    font-size: 18px;
+    font-weight: 500;
+ }
+
+
+
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>JS DOM paragraph style</title>
+<style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .text_bold{
+        font-size:24px;
+        font-weight:500;
+    }
+</style>
+</head> 
+<body>
+<div style="width:300px;height: 80px;margin:0;padding:0;overflow: hidden;"><p id ='text'>JavaScript Exercises - w3resource</p> </div>
+<button onclick="tB()">text bold</button>
+<div>
+<button id="jsstyle"
+onclick="js_style()">style</button>
+</div>
+<script>
+    let text=document.getElementById("text");
+    
+    function js_style(){
+        let btn= document.getElementById("jsstyle");
+        if( btn.innerText === "Remove Style"){
+            btn.innerText="style";
+            text.style.background="white";
+            text.style.color="black";
+        }
+        else{
+            btn.innerText="Remove Style";
+            text.style.background="red";
+            text.style.color="white";
+        }
+    
+    }
+    function tB(){
+        text.classList.toggle("text_bold");
+    }
+
+</script>
+</body>
+</html>

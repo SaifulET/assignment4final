@@ -1,0 +1,6 @@
+@media (max-width:552px)
+{
+    #btn-section{
+        flex-direction: column!important;
+    }
+}

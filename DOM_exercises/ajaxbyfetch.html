@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <input type="button"onclick="apicall()" value="callApi">
+    <p id="demo"></p>
+   <script>
+    async function apicall(){
+        let rawData=await fetch("https://jsonplaceholder.typicode.com/albums");
+        let jsonData= await rawData.json();
+        console.log(jsonData);
+        document.getElementById("demo").innerText= jsonData;
+        
+    }
+   </script> 
+</body>
+</html>

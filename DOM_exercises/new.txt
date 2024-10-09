@@ -1,0 +1,6 @@
+{
+  "userId":[ 1,2,3],
+  "id": [1,2,3],
+  "title": ["delectus aut autem","lorem","ifson"],
+  "completed": [false,true,false]
+}

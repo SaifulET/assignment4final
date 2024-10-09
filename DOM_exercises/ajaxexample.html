@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax example</title>
+    <style>
+        /* body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 25px;
+            width: 350px;
+            height: 200px;
+        } */
+        body>div{
+            max-width: 900px;
+            margin: auto;
+        }
+        table,td,tr{
+            border-collapse: collapse;
+            padding:5px;
+            border:2px solid black;
+        }
+        table{
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+    <div><div>Ajax example</div>
+    <table id="ajax"></table>
+    <button id="seeless"onclick="fire()">click</button>
+</div>
+    <script>
+        let para = document.getElementById("ajax");
+        let seeless=document.getElementById("seeless");
+        function fire(){
+            let xhr= new XMLHttpRequest();
+            xhr.onload= function(){
+                let xhrData= this.response;
+                para.innerHTML="";
+                if( seeless.innerHTML==="click"){
+                    seeless.innerHTML="see less"
+                    para.innerHTML="<tr><td>userId</td><td>id</td><td>completed</td></tr>";
+                   for(let i=0;i<xhrData.userId.length;i++){
+                    para.innerHTML+="<tr><td>"+xhrData.userId[i]+"</td><td>"+
+                        xhrData.id[i]+"</td><td>"+xhrData.completed[i]+"</td></tr>";
+                } 
+                }
+                else{
+                    seeless.innerHTML="click";
+                }
+                
+            }
+            xhr.responseType="json";
+            xhr.open("GET","new.txt");
+            xhr.send();
+        }
+    </script>
+</body>
+</html>

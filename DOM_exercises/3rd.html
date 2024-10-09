@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouseover event</title>
+</head>
+<body>
+    <p id="para" onmouseenter="zoomin(this)" onmouseout="zoomout(this)" style="width:100px;margin:0;padding:0;height: 50px;overflow: hidden;">saiful islam</p>
+    <button>submit</button>
+
+    <script>
+        function zoomin(e){
+            e.style.fontSize="36px";
+        }
+        function zoomout(e){
+            e.style.fontSize="18px";
+        }
+            
+    </script>
+</body>
+</html>

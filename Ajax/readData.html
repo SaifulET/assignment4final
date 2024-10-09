@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Data</title>
+</head>
+<body>
+    <button onclick="onRead()">Read Product</button>
+    <p id="para"></p>
+    
+
+    <script>
+        async function onRead(){
+            let parag=document.getElementById("para");
+            let url=  "https://crud.teamrabbil.com/api/v1/ReadProduct";
+            let Rowdata = await fetch(url);
+            let JsonData= await Rowdata.json();
+            console.log(JsonData);
+            parag.innerHTML=JsonData.data[1].ProductName;
+            console.log(JsonData.data[1].ProductName);
+        }
+    </script>
+</body>
+</html>

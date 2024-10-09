@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>content change</title>
+</head>
+<body>
+    <div >
+        <h1 id="heading1">it is my actual dream</h1>
+        <p id="para"></p>
+    </div>
+    <button id="btn" onclick="change()">change the content</button>
+    <script>
+        function change(){
+            let head1 = document.getElementById("heading1");
+            let para= document.getElementById("para");
+            para.innerHTML="Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, tempora! Ducimus beatae, nam repudiandae culpa magnam nihil, et numquam aliquam est excepturi iure veniam exercitationem ratione, sint incidunt dolor praesentium ullam. Nisi quisquam officiis in dolorum libero odit, explicabo architecto odio eos quae non sint itaque earum tenetur excepturi nam!";
+            head1.innerHTML="We are Learning Ajax"; 
+            para.style.width="200px";
+            let btn = document.getElementById("btn");
+            btn.style.display="none";
+        }
+    </script>
+</body>
+</html>
